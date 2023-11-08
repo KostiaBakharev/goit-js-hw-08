@@ -65,3 +65,10 @@ button:hover {
   background-color: rgb(232, 232, 232);
   color: #1e3d4b;
 }
+
+.container-video {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}

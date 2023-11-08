@@ -1,11 +1,11 @@
 .feedback-form {
   display: flex;
   flex-direction: column;
-  max-width: 480px;
+  max-width: 680px;
   padding: 12px;
-  background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  border-radius: 5px;
+  margin: 0 auto;
 }
 
 .feedback-form label {
@@ -15,17 +15,61 @@
 }
 
 .feedback-form button {
+  cursor: pointer;
   padding: 8px 12px;
   font: inherit;
-  cursor: pointer;
+  background-color: #15065e;
+  color: aliceblue;
+  font-weight: 700;
+  font-size: 20;
+  text-transform: uppercase;
+  letter-spacing: 1.4;
+  border: 2px;
+  box-shadow: 2px 2px 5px(rgba(0, 0, 0, 0.12));
+  animation: pulseAnimation 1s infinite;
+}
+
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.01);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+form {
+  background-color: rgb(224, 220, 238);
 }
 
 input,
 textarea {
-  padding: 8px;
+  background-color: transparent;
+  padding: 8px 20px;
   font: inherit;
+  border: 1px solid #9e9c9c;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
 }
 
 textarea {
   resize: none;
+}
+
+textarea:focus,
+textarea:hover,
+input:hover,
+input:focus {
+  padding: 8px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #575756;
+  border-radius: 0;
+  background-position: 100% center;
+
 }
